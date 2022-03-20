@@ -1,3 +1,4 @@
+import * as PIXI from 'pixi.js'
 const FRICTION = 0.98
 const COLOR_SPEED = 0.12
 const MOVE_SPEED = 0.88
@@ -29,5 +30,16 @@ export class Particle {
     this.rgb += (this.savedRgb - this.rgb) * COLOR_SPEED
 
     this.x += (this.savedRgb - this.x) * MOVE_SPEED
+    this.y += (this.savedRgb - this.y) * MOVE_SPEED
+
+    this.vx *= FRICTION
+    this.vy *= FRICTION
+
+    this.x += this.vx
+    this.y += this.vy
+    
+    this.sprite.x = this.x
+    this.sprite.y = this.y
+    this.sprite.tint = this.rgb
   }
 }
