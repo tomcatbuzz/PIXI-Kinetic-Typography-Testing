@@ -1,0 +1,21 @@
+{
+  "name": "pixi-js-kinetictyp",
+  "version": "1.0.0",
+  "description": "Pixi-js App for kinetic typography",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [
+    "Pixi-js",
+    "kinetic",
+    "typography"
+  ],
+  "author": "Anthony Buzzelli",
+  "license": "MIT",
+  "dependencies": {
+    "pixi.js": "^6.2.2",
+    "webfontloader": "^1.6.28"
+  }
+}
